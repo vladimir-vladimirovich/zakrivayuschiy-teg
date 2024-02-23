@@ -590,13 +590,15 @@
         </svg>
         <span class="dialog-text">Вставьте дискету, чтобы продолжить</span>
       </div>
-      <button
-        class="dialog-button content-button button"
-        type="button"
-        onclick="window['dialog-id'].close();"
-      >
-        <span class="button__text">OK</span>
-      </button>
+      <form method="dialog">
+        <button
+          class="dialog-button content-button button"
+          type="button"
+          onclick="window['dialog-id'].close();"
+        >
+          <span class="button__text">OK</span>
+        </button>
+      </form>
     </dialog>
     <script src="./scripts/set-theme.js"></script>
     <script src="./scripts/like.js"></script>
