@@ -241,6 +241,17 @@
   mix-blend-mode: hard-light;
 }
 
+@supports (
+  (text-stroke: 1px var(--shadow-color)) or
+    (-webkit-text-stroke: 1px var(--shadow-color))
+) {
+  .img-overlay-text {
+    -webkit-text-stroke: 1px var(--shadow-color);
+    text-stroke: 1px var(--shadow-color);
+    text-shadow: none;
+  }
+}
+
 @media (width <= 375px) {
   .img-overlay-text {
     inset-block-start: 23px;
