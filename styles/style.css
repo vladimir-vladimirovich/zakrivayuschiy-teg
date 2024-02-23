@@ -153,6 +153,12 @@
   gap: 51px;
 }
 
+.cards-section {
+  display: flex;
+  flex-direction: column;
+  gap: 51px;
+}
+
 .card {
   background-color: var(--bg-color);
   width: var(--content-width);
@@ -174,6 +180,7 @@
   border-block: 2px solid var(--accent-color);
   box-sizing: border-box;
   object-fit: cover;
+  object-position: center;
 }
 
 .img-container {
@@ -217,7 +224,7 @@
 
 .img-overlay-text {
   position: absolute;
-  inset-block-start: 25px;
+  inset-block-start: 28px;
   inset-inline-end: 25px;
 
   font-family: var(--font-accent);
@@ -232,6 +239,13 @@
     0px 1px 0 var(--shadow-color), -1px 1px 0 var(--shadow-color),
     -1px 0px 0 var(--shadow-color), -1px -1px 0 var(--shadow-color);
   mix-blend-mode: hard-light;
+}
+
+@media (width <= 375px) {
+  .img-overlay-text {
+    inset-block-start: 23px;
+    inset-inline-end: 11px;
+  }
 }
 
 .card-text {
@@ -268,7 +282,6 @@
   box-shadow: 0 0 0 var(--accent-color);
   position: relative;
   overflow: hidden;
-  transition: box-shadow 0.3s ease, color 1s ease;
 }
 
 .content-button:focus {
@@ -314,6 +327,10 @@
 
   display: flex;
   align-items: center;
+}
+
+.card__icon-button:focus {
+  outline: none;
 }
 
 .card__icon-button:focus-visible {
@@ -391,7 +408,7 @@
 }
 
 .dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.3);
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 @media (width <= 375px) {
