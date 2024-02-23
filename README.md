@@ -1,0 +1,1 @@
+github pages: https://vladimir-vladimirovich.github.io/zakrivayuschiy-teg/
